@@ -11,10 +11,10 @@ sudo chown nobody:nogroup /home/erudeye/nfs
 sudo chmod 777 /home/erudeye/nfs
 
 #mv /etc/exports
-sudo mv /etc/exports /home/erudeye
+sudo mv /etc/exports /var/backups/
 
 #download exports share file 
-sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/exports -P /etc/exports
+sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/exports -P /etc/
 
 sudo systemctl restart nfs-kernel-server
 
