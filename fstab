@@ -1,0 +1,8 @@
+# CLOUD_IMG: This file was created/modified by the Cloud Image build process
+UUID=256b787d-e042-4ddb-98d6-3ac3bf4cd180       /        ext4   defaults,discard        0 0
+LABEL=UEFI      /boot/efi       vfat    defaults,discard        0 0
+/dev/disk/cloud/azure_resource-part1    /mnt    auto    defaults,nofail,x-systemd.requires=cloud-init.service,comment=cloudconfig       0       2
+
+10.0.0.0/24:/home/erudeye/nfs /home/erudeye/nfs nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
+
+10.0.0.0/24:/home/erudeye/nfs/moodle /home/erudeye/nfs/moodle nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
