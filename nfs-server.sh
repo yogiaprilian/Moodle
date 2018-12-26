@@ -14,7 +14,7 @@ sudo chmod 777 /home/erudeye/nfs
 sudo mv /etc/exports /home/erudeye
 
 #download exports share file 
-sudo wget https://github.com/yogiaprilian/NFS-Ubuntu/blob/master/exportsnfs -P /etc/exports
+sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/exports -P /etc/exports
 
 sudo systemctl restart nfs-kernel-server
 
