@@ -31,7 +31,9 @@ skip-external-locking
 
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
-bind-address		= 127.0.0.1
+
+#Diganti dengan IP HOST DATABASE
+bind-address		= 10.0.0.5 
 
 #
 # * Fine Tuning
