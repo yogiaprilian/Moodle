@@ -75,10 +75,3 @@ sudo a2ensite moodle.conf
 
 sudo systemctl reload apache2
 
-sudo mv /etc/mysql/my.cnf /var/backups
-
-sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/my.cnf -P /etc/mysql/
-
-sudo systemctl restart mariadb.service
-
-sudo systemctl restart apache2.service
