@@ -9,6 +9,6 @@
 # /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
 #
 
-/home/erudeye/nfs 10.0.0.0/24(rw,sync,no_subtree_check)
-/home/erudeye/nfs/moodle 10.0.0.0/24(rw,sync,no_subtree_check)
-#/home 10.0.0.0/24(rw,sync,no_root_squash,no_subtree_check)
+/home/erudeye/nfs/website 10.0.0.0/24(rw,sync,no_subtree_check)
+#/home/erudeye/nfs/moodle 10.0.0.0/24(rw,sync,no_subtree_check)
+/home 10.0.0.0/24(rw,sync,no_root_squash,no_subtree_check)
