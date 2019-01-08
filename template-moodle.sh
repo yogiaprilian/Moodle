@@ -12,15 +12,10 @@ sudo chmod 777 /home/erudeye/nfs/website
 #mount folder
 sudo mount 10.0.0.4:/home/erudeye/nfs/website /home/erudeye/nfs/website
 
-#Create folder backup config
-
-sudo mkdir /home/erudeye/backup-config
-
-sudo chmod 777 /home/erudeye/backup-config
 
 #fstab
 
-sudo mv /etc/fstab /home/erudeye/backup-config
+sudo mv /etc/fstab /var/backups
 
 sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/fstab -P /etc/
 
@@ -29,10 +24,10 @@ sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/fstab -P 
 sudo apt update
 sudo apt-get -y install apache2
 
-sudo mv /etc/apache2/apache2.conf /home/erudeye/backup-config
+sudo mv /etc/apache2/apache2.conf /var/backups
 sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/apache2.conf -P /etc/apache2
 
-sudo mv /etc/apache2/sites-available/000-default.conf /home/erudeye/backup-config
+sudo mv /etc/apache2/sites-available/000-default.conf /var/backups
 sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/000-default.conf -P /etc/apache2/sites-available
 
 sudo sed -i "s/Options Indexes FollowSymLinks/Options FollowSymLinks/" /etc/apache2/apache2.conf
@@ -51,7 +46,7 @@ sudo apt update
 
 sudo apt install -y php7.2 libapache2-mod-php7.2 php7.2-common php7.2-gmp php7.2-curl php7.2-intl php7.2-mbstring php7.2-xmlrpc php7.2-mysql php7.2-gd php7.2-xml php7.2-soap php7.2-cli php7.2-zip
 
-sudo mv /etc/php/7.2/apache2/php.ini /home/erudeye/backup-config 
+sudo mv /etc/php/7.2/apache2/php.ini /var/backups 
 
 sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/php.ini -P /etc/php/7.2/apache2/
 
@@ -81,7 +76,7 @@ sudo a2ensite moodle.conf
 
 sudo systemctl reload apache2
 
-sudo mv /etc/mysql/my.cnf /home/erudeye/backup-config
+sudo mv /etc/mysql/my.cnf /var/backups
 
 sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/my.cnf -P /etc/mysql/
 
