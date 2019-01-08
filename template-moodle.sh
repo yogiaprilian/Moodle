@@ -4,13 +4,13 @@ sudo apt update
 sudo apt-get -y install nfs-common
 
 #create folder 
-sudo mkdir -p /home/erudeye/nfs
+sudo mkdir -p /home/erudeye/nfs/website
 
 #give full access
-sudo chmod 777 /home/erudeye/nfs
+sudo chmod 777 /home/erudeye/nfs/website
 
 #mount folder
-sudo mount 10.0.0.4:/home/erudeye/nfs /home/erudeye/nfs
+sudo mount 10.0.0.4:/home/erudeye/nfs/website /home/erudeye/nfs/website
 
 #Create folder backup config
 
