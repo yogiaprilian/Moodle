@@ -33,7 +33,7 @@ skip-external-locking
 # localhost which is more compatible and is not less secure.
 
 #Diganti dengan IP HOST DATABASE
-bind-address		= 10.0.0.5 
+bind-address		= 10.0.0.6 
 
 #
 # * Fine Tuning
