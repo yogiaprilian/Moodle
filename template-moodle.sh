@@ -57,13 +57,12 @@ sudo systemctl restart apache2.service
 
 sudo apt install git curl
 
-sudo git clone -b MOODLE_36_STABLE git://git.moodle.org/moodle.git moodle
+sudo git clone -b MOODLE_36_STABLE git://git.moodle.org/moodle.git /home/erudeye/nfs/website/moodle
 
-sudo mv moodle /home/erudeye/nfs
-sudo chmod 777 /home/erudeye/nfs/moodle
+sudo chmod 777 /home/erudeye/nfs/website/moodle
 
-sudo mkdir -p /home/erudeye/nfs/moodledata
-sudo chmod 777 /home/erudeye/nfs/moodledata
+sudo mkdir -p /home/erudeye/nfs/website/moodledata
+sudo chmod 777 /home/erudeye/nfs/website/moodledata
 
 sudo wget https://raw.githubusercontent.com/yogiaprilian/Moodle/master/moodle.conf -P /etc/apache2/sites-available/
 
